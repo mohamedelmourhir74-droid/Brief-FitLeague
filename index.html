@@ -1,12 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>Document</title>
 </head>
+
 <body>
-    <script src="js/bootstrap.min.js" ></script>    
+    <div class="d-flex">
+        <nav class="d-flex flex-column flex-shrink-0 p-3 text-white" style="
+              background: linear-gradient(to bottom, #0b0f19, #111827) #112d4e;
+            ">
+            <h3>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="100%" height="100%">
+                    <defs>
+                        <!-- Dark Tech/Modern Background Gradient -->
+                        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0B0F19" />
+                            <stop offset="100%" stop-color="#111827" />
+                        </linearGradient>
+
+                        <!-- Vibrant Electric Flame / Lightning Gradient (Energy & Passion) -->
+                        <linearGradient id="energyGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#FF3B00" />
+                            <stop offset="50%" stop-color="#FF8800" />
+                            <stop offset="100%" stop-color="#FFCC00" />
+                        </linearGradient>
+
+                        <!-- High-Performance Neon Cyan / Electric Blue Gradient (Tech & Web) -->
+                        <linearGradient id="techGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00F2FE" />
+                            <stop offset="100%" stop-color="#4FACFE" />
+                        </linearGradient>
+
+                        <!-- Sleek Silver / Chrome Gradient for Premium Badge Accents -->
+                        <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#E2E8F0" />
+                            <stop offset="100%" stop-color="#94A3B8" />
+                        </linearGradient>
+
+                        <!-- Dynamic Glow Effects -->
+                        <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="6" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+
+                        <filter id="orangeGlow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="8" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+
+                    <!-- Dark Background Plate -->
+                    <rect width="800" height="250" rx="16" fill="url(#bgGrad)" />
+
+                    <!-- Subtle Web Grid Overlay Pattern (Representing Web App Infrastructure) -->
+                    <g opacity="0.05" stroke="#FFFFFF" stroke-width="1">
+                        <path d="M 0 50 L 800 50 M 0 100 L 800 100 M 0 150 L 800 150 M 0 200 L 800 200" />
+                        <path
+                            d="M 100 0 L 100 250 M 200 0 L 200 250 M 300 0 L 300 250 M 400 0 L 400 250 M 500 0 L 500 250 M 600 0 L 600 250 M 700 0 L 700 250" />
+                    </g>
+
+                    <!-- BRANDMARK / ICON (Left Side) -->
+                    <g transform="translate(45, 0)">
+                        <!-- Outer Shield / Crest Frame (League & Shield) -->
+                        <path d="M 100 35 L 165 65 V 135 C 165 175 100 210 100 210 C 100 210 35 175 35 135 V 65 Z"
+                            fill="none" stroke="url(#techGrad)" stroke-width="5" stroke-linejoin="round"
+                            filter="url(#cyanGlow)" />
+
+                        <!-- Inner Shield Background -->
+                        <path d="M 100 43 L 157 69 V 131 C 157 166 100 197 100 197 C 100 197 43 166 43 131 V 69 Z"
+                            fill="#1E293B" opacity="0.6" />
+
+                        <!-- Dynamic "F" Wing (Left Side of 'F' + Flame Energy) -->
+                        <path
+                            d="M 68 75 H 125 C 125 75 110 95 90 95 H 68 V 120 H 110 C 110 120 98 138 80 138 H 68 V 170 C 68 170 52 160 52 145 V 90 C 52 78 60 75 68 75 Z"
+                            fill="url(#energyGrad)" filter="url(#orangeGlow)" />
+
+                        <!-- Dynamic "L" Wing & Victory Ribbon (Right Side - Interlocking League Motif) -->
+                        <path
+                            d="M 115 105 L 142 75 V 142 C 142 165 115 180 100 188 C 100 188 118 165 118 145 V 122 L 100 140 L 92 130 L 115 105 Z"
+                            fill="url(#techGrad)" />
+
+                        <!-- Podium / Ranking Metric Bar Accents (Interactive & CRUD Concept) -->
+                        <rect x="75" y="152" width="8" height="18" rx="2" fill="url(#techGrad)" />
+                        <rect x="87" y="144" width="8" height="26" rx="2" fill="url(#energyGrad)" />
+                        <rect x="99" y="158" width="8" height="12" rx="2" fill="url(#techGrad)" />
+
+                        <!-- Sharp Glowing Crown / Peak (Top Center) -->
+                        <polygon points="100,22 108,38 125,38 111,48 116,64 100,54 84,64 89,48 75,38 92,38"
+                            fill="url(#energyGrad)" />
+                    </g>
+
+                    <!-- TYPOGRAPHY / LOGOTYPE (Right Side) -->
+                    <!-- "Fit" Text -->
+                    <text x="240" y="138"
+                        font-family="system-ui, -apple-system, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, sans-serif"
+                        font-size="76" font-weight="900" font-style="italic" letter-spacing="1" fill="#FFFFFF">
+                        FIT
+                    </text>
+
+                    <!-- "League" Text -->
+                    <text x="365" y="138"
+                        font-family="system-ui, -apple-system, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, sans-serif"
+                        font-size="76" font-weight="900" font-style="italic" letter-spacing="1" fill="url(#energyGrad)"
+                        filter="url(#orangeGlow)">
+                        LEAGUE
+                    </text>
+
+                    <!-- Tagline / Subtitle -->
+                    <g transform="translate(242, 172)">
+                        <!-- Subtitle Background Capsule -->
+                        <rect x="0" y="0" width="490" height="30" rx="6" fill="#1E293B" opacity="0.8" stroke="#334155"
+                            stroke-width="1" />
+
+                        <!-- Decorative Tech Dot -->
+                        <circle cx="16" cy="15" r="4" fill="#00F2FE" />
+
+                        <!-- Subtitle Text -->
+                        <text x="30" y="20"
+                            font-family="system-ui, -apple-system, &#39;Segoe UI&#39;, Roboto, sans-serif"
+                            font-size="13" font-weight="700" letter-spacing="2" fill="#94A3B8">
+                            CHALLENGES
+                            <tspan fill="#FF8800">•</tspan>
+                            PERFORMANCE
+                            <tspan fill="#FF8800">•</tspan>
+                            CLASSEMENT
+                        </text>
+                    </g>
+
+                    <!-- Top Right Web App Badge (Indicating Modern JS / Web App Focus) -->
+                    <g transform="translate(710, 25)">
+                        <rect x="-35" y="0" width="90" height="22" rx="11" fill="#1E293B" stroke="url(#techGrad)"
+                            stroke-width="1.5" />
+                        <text x="10" y="15" text-anchor="middle" font-family="sans-serif" font-size="10"
+                            font-weight="800" fill="#00F2FE" letter-spacing="1">
+                            WEB APP
+                        </text>
+                    </g>
+                </svg>
+            </h3>
+            <hr />
+            <ul class="nav nav-pills flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link text-white active" href="">
+                        dashbord
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="">difer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="">partisepent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="">classment</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="main-content m-3">
+            <div class="d-flex align-items-center h-100">
+                <section class="card" >
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <a href="#" class="btn-solid theme-primary">Go somewhere</a>
+                    </div>
+                </section>
+                <section class="card" style="max-width: 320px">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+                    <a href="#" class="btn-solid theme-primary">Go somewhere</a>
+                </div>
+            </section>
+            <section class="card" style="max-width: 320px">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p>
+                    <a href="#" class="btn-solid theme-primary">Go somewhere</a>
+                </div>
+            </section>
+            </div>
+            
+        </main>
+    </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
