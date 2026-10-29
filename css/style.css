@@ -4,7 +4,16 @@
     overflow: scroll;
     max-height:100vh;
 }
-
+.collaps{
+    width: 0;
+    transform: all 1s ease;
+    ul{
+      opacity: 0;
+      li{
+        opacity: 0;
+      }  
+    }
+}
 .icon-contaner{
     width: 3rem;
     height: 3rem;
