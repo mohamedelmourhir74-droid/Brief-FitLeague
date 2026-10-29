@@ -1,0 +1,12 @@
+.main-content{
+    min-height: 94.5vh;
+    width: 100%;
+    overflow: scroll;
+    max-height:100vh;
+}
+
+.icon-contaner{
+    width: 3rem;
+    height: 3rem;
+}
+
