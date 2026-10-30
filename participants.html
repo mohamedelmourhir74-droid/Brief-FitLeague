@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Participants</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
     integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
 </head>
 
 <body>
   <div class="d-flex">
-    <nav class="d-flex flex-column flex-shrink-0 p-3 text-white" style="
+    <nav id="sidebare" class="d-flex flex-column flex-shrink-0 p-3 text-white" style="
               background: linear-gradient(to bottom, #0b0f19, #111827) #112d4e;
             ">
       <h3>
@@ -164,36 +164,98 @@
       </ul>
     </nav>
     <main class="main-content m-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-3">
+      <!-- Modal creation participant-->
+      <div class="modal fade" id="nouveauParticipantModal" tabindex="-1" aria-labelledby="nouveauParticipantModal"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="nouveauParticipantModal">Crée un participant</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-middle ">
+              <form action="" id="formNouveauParticipantModal" class="d-flex flex-column">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+                <label for="name">Nom</label>
+                <input type="text" id="name" required>
+                <label for="prénom">Prénom</label>
+                <input type="text" id="prénom" required>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                  <button type="submit" class="btn btn-success" id="confirmer-participant">Confirmer</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal modification participant-->
+      <div class="modal fade" id="modifierParticipantModal" tabindex="-1" aria-labelledby="modifierParticipantModal"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modifierParticipantModal">Crée un participant</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-middle ">
+              <label for="username">Username</label>
+              <input type="text" id="username">
+              <label for="name">Nom</label>
+              <input type="text" id="name">
+              <label for="prénom">Prénom</label>
+              <input type="text" id="prénom">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+              <button type="button" class="btn btn-success" id="confirmer-modification-participant">Confirmer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class=" d-flex justify-content-between nav navbar-light" background: linear-gradient(to bottom, #0b0f19,
+        #111827) #112d4e>
+        <button class="navbar-toggler" id="tggler">
+          <i class="bi bi-three-dots-vertical"></i>
+        </button>
+        <form class="form-inline">
+          <input type="text" class="form-control mr-sm-2" type="search" placeholder="search">
+        </form>
+      </div>
+      <div class="justify-content-between d-flex my-2">
+        <h1>Participants</h1>
+        <button type="button" data-bs-target="#nouveauParticipantModal" data-bs-toggle="modal" id="ajouter-participant"
+          class="btn bg-success text-white ">+ Participant</button>
+      </div>
+      <div class="container m-2">
+        <div class="row gy-3" id="container-participants">
+
+          <!-- Une carte de participant -->
+          <div class="col-lg-3" id="id-card-participant">
             <div class="card">
-              <img src="images/ferari.jpg" alt="" class="card-image">
+              <img src="images/avatar.png" alt="" class="card-image">
               <div class="card-body">
                 <h1 class="card-title">xFawzer</h1>
-                <p class="card-description">Défis</p>
-                <a href="" class="btn btn-primary">modifier</a>
+                <p class="card-description">Tayeb Souini</p>
+                <p class="card-description">Défis 2/5</p>
+                <button class="btn bg-primary text-white" data-bs-target="#modifierParticipantModal"
+                  data-bs-toggle="modal">Modifier</button>
                 <a href="" class="btn btn-danger">Supprimer</a>
               </div>
             </div>
           </div>
-          <div class="col-3">
-            <div class="card">
-              <img src="images/ferari.jpg" alt="" class="card-image">
-              <div class="card-body">
-                <h1 class="card-title">test</h1>
-                <p class="card-description">yesyes</p>
-                <a href="" class="btn btn-primary">modifier</a>
-                <a href="" class="btn btn-danger">Supprimer</a>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </main>
   </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="participants.js"></script>
 </body>
 
 </html>
