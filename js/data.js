@@ -3,7 +3,7 @@ const challenges = [
         id: 1,
         challengeName: "Running",
         description: "Marathon 5KM",
-        participants:[1]
+        participants:[1,4]
     },
     {
         id: 2,
@@ -41,11 +41,13 @@ const participants = [
     {
         id: 4,
         participantName: "Sara",
-        pseudo: "__sara_22__"
+        pseudo: "__sara_22__",
+        performance :[{3:"1km"}]
     },
     {
         id: 5,
         participantName: "Salma",
-        pseudo: "__salma_fit__"
+        pseudo: "__salma_fit__",
+        performance :[{3:"complited"}]
     }
 ];
