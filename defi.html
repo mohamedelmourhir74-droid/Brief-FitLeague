@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
     <title>Document</title>
 </head>
 
 <body>
     <div class="d-flex">
-        <nav class="d-flex flex-column flex-shrink-0 p-3 text-white" style="
+        <nav id="sidebare" class="d-flex flex-column flex-shrink-0 p-3 text-white" style="
               background: linear-gradient(to bottom, #0b0f19, #111827) #112d4e;
             ">
             <h3>
@@ -169,23 +171,24 @@
 
             <!-- la page de defis -->
 
-            <header>
-                <nav class="navbar navbar-light bg-light">
-                    <div class="container-fluid">
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                        <button class="btn btn-outline-success me-2" type="button">Nouveau Defi</button>
-                    </div>
-                </nav>
+            <div>
+                <div class=" d-flex justify-content-between nav navbar-light" background: linear-gradient(to bottom,
+                    #0b0f19, #111827) #112d4e>
+                    <button class="navbar-toggler" id="tggler">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <form class="form-inline">
+                        <input type="text" class="form-control mr-sm-2" type="search" placeholder="search">
+                    </form>
+                </div>
 
-                <div class="page-titel">
+                <div class="page-titel d-flex justify-content-between m-3">
                     <h1>
                         Défis
                     </h1>
+                    <button class="btn btn-outline-success h-25 w-20" type="submit">Nouveau Défi</button>
                 </div>
-            </header>
+            </div>
 
             <section class="container">
                 <div class="row g-4">
@@ -194,7 +197,7 @@
                             <img src="assists/defi-sportif.webp" class="defi-img" alt="..">
                             <div class="card_defi-body">
                                 <div class="defi-titel">
-                                    <h2 class="defi-name">Defi Sportif</h2>
+                                    <h2 class="defi-name">Défi Sportif</h2>
                                 </div>
                                 <div class="defi-participants">
                                     <ul class="list-group list-group-flush">
@@ -202,7 +205,8 @@
                                     </ul>
                                 </div>
                                 <div class="card-description">
-                                    <p class="card-description" style="font-size: small;">ce defi permet au participant d'augmenter sa condition physique</p>
+                                    <p class="card-description" style="font-size: small;">ce defi permet au participant
+                                        d'augmenter sa condition physique</p>
                                 </div>
                                 <div class="card-buttons"
                                     style="display: flex; justify-content: space-around; gap: 5px;">
@@ -219,7 +223,7 @@
                             <img src="assists/defi-sportif.webp" class="defi-img" alt="..">
                             <div class="card_defi-body">
                                 <div class="defi-titel">
-                                    <h2 class="defi-name">Defi Sportif</h2>
+                                    <h2 class="defi-name">Défi Sportif</h2>
                                 </div>
                                 <div class="defi-participants">
                                     <ul class="list-group list-group-flush">
@@ -227,7 +231,8 @@
                                     </ul>
                                 </div>
                                 <div class="card-description">
-                                    <p class="card-description" style="font-size: small;">ce defi permet au participant d'augmenter sa condition physique</p>
+                                    <p class="card-description" style="font-size: small;">ce defi permet au participant
+                                        d'augmenter sa condition physique</p>
                                 </div>
                                 <div class="card-buttons"
                                     style="display: flex; justify-content: space-around; gap: 5px;">
@@ -244,7 +249,7 @@
                             <img src="assists/defi-sportif.webp" class="defi-img" alt="..">
                             <div class="card_defi-body">
                                 <div class="defi-titel">
-                                    <h2 class="defi-name">Defi Sportif</h2>
+                                    <h2 class="defi-name">Défi Sportif</h2>
                                 </div>
                                 <div class="defi-participants">
                                     <ul class="list-group list-group-flush">
@@ -252,7 +257,8 @@
                                     </ul>
                                 </div>
                                 <div class="card-description">
-                                    <p class="card-description" style="font-size: small;">ce defi permet au participant d'augmenter sa condition physique</p>
+                                    <p class="card-description" style="font-size: small;">ce defi permet au participant
+                                        d'augmenter sa condition physique</p>
                                 </div>
                                 <div class="card-buttons"
                                     style="display: flex; justify-content: space-around; gap: 5px;">
@@ -269,7 +275,7 @@
                             <img src="assists/defi-sportif.webp" class="defi-img" alt="..">
                             <div class="card_defi-body">
                                 <div class="defi-titel">
-                                    <h2 class="defi-name">Defi Sportif</h2>
+                                    <h2 class="defi-name">Défi Sportif</h2>
                                 </div>
                                 <div class="defi-participants">
                                     <ul class="list-group list-group-flush">
@@ -277,7 +283,8 @@
                                     </ul>
                                 </div>
                                 <div class="card-description">
-                                    <p class="card-description" style="font-size: small;">ce defi permet au participant d'augmenter sa condition physique</p>
+                                    <p class="card-description" style="font-size: small;">ce defi permet au participant
+                                        d'augmenter sa condition physique</p>
                                 </div>
                                 <div class="card-buttons"
                                     style="display: flex; justify-content: space-around; gap: 5px;">
@@ -294,7 +301,7 @@
                             <img src="assists/defi-sportif.webp" class="defi-img" alt="..">
                             <div class="card_defi-body">
                                 <div class="defi-titel">
-                                    <h2 class="defi-name">Defi Sportif</h2>
+                                    <h2 class="defi-name">Défi Sportif</h2>
                                 </div>
                                 <div class="defi-participants">
                                     <ul class="list-group list-group-flush">
@@ -302,7 +309,8 @@
                                     </ul>
                                 </div>
                                 <div class="card-description">
-                                    <p class="card-description" style="font-size: small;">ce defi permet au participant d'augmenter sa condition physique</p>
+                                    <p class="card-description" style="font-size: small;">ce defi permet au participant
+                                        d'augmenter sa condition physique</p>
                                 </div>
                                 <div class="card-buttons"
                                     style="display: flex; justify-content: space-around; gap: 5px;">
@@ -312,7 +320,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
 
                     <!-- <div class="col-3">
                         <div class="card">
@@ -388,7 +396,8 @@
         </main>
     </div>
     </div>
-    <script src="js/bootstrap.min.js"></script>
+    <script  src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
