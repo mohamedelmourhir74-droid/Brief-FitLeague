@@ -19,7 +19,10 @@ const challenges = [
     }
 ];
 
-const participants = [
+id = 0;
+
+
+localStorage.setItem("participants",JSON.stringify([
     {
         id: 1,
         participantName: "Mohamed",
@@ -50,4 +53,7 @@ const participants = [
         pseudo: "__salma_fit__",
         performance :[{3:"complited"}]
     }
-];
+]))
+
+
+let participants = JSON.parse(localStorage.getItem("participants"))

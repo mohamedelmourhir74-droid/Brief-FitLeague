@@ -1,34 +1,60 @@
-// const participants = document.getElementById("container-participants");
-// const ajouterParticipant = document.getElementById("confirmer-participant");
-// const form = document.getElementById("formNouveauParticipantModal")
+const participantsContainer = document.getElementById("container-participants");
 
-// form.addEventListener("submit", (e) => {
+const confirmerParticipant = document.getElementById("confirmer-participant");
 
-//     e.preventDefault()
+const form = document.getElementById("formNouveauParticipantModal")
 
-//     const username = document.getElementById("username").value
-//     const name = document.getElementById("name").value
-//     const prénom = document.getElementById("prénom").value
+
+
+
+
+function afficherLesParticipants(){
+    participantsContainer.innerHTML = ``
+
+    participants.forEach(participant => {
+        
+        let carteParticipant = `<div class="col-lg-3" id="id-card-participant">
+                <div class="card">
+                <img src="images/avatar.png" alt="" class="card-image">
+                <div class="card-body">
+                    <h1 class="card-title">${participant.pseudo}</h1>
+                    <p class="card-description">${participant.participantName}</p>
+                    <p class="card-description">Défis palceholder</p>
+                    <button class="btn bg-primary text-white" data-bs-target="#modifierParticipantModal"
+                    data-bs-toggle="modal">Modifier</button>
+                    <a href="" class="btn btn-danger">Supprimer</a>
+                </div>
+                </div>
+            </div>
+            `
+
+    participantsContainer.innerHTML += carteParticipant
+});
+}
+
+function ajouterParticipant(){
     
-//     ajouterCarteParticipant(username,name,prénom)
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    const pseudo = form.pseudo.value
+    const nom = form.nom.value
 
-// });
+     participants.push({
+        id: id,
+        participantName: nom,
+        pseudo: pseudo,
+        performance: []
+    })
+    localStorage.setItem("participants",JSON.stringify(participants))
+    id++
+    participants = JSON.parse(localStorage.getItem("participants"))
+    afficherLesParticipants()
+    
+})
+}
 
-// function ajouterCarteParticipant(username,name,prénom){
-//     participants.innerHTML += `
-//     <div class="col-lg-3">
-//             <div class="card">
-//               <img src="images/avatar.png" alt="" class="card-image">
-//               <div class="card-body">
-//                 <h1 class="card-title">${username}</h1>
-//                 <p class="card-description">${name} ${prénom}</p>
-//                 <p class="card-description">Défis 2/5</p>
-//                 <a href="" class="btn btn-primary">modifier</a>
-//                 <a href="" class="btn btn-danger">Supprimer</a>
-//               </div>
-//             </div>
-//           </div>`;
-// };
+afficherLesParticipants()
+ajouterParticipant()
 
 
 
