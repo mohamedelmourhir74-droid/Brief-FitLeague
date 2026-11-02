@@ -148,18 +148,18 @@
       <hr />
       <ul class="nav nav-pills flex-column ">
         <li class="nav-item">
-          <a class="nav-link text-white" href="">
+          <a class="nav-link text-white" href="index.html">
             Dashboard
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="">Défis</a>
+          <a class="nav-link text-white" href="defi.html">Défis</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white active" href="">Participants</a>
+          <a class="nav-link text-white active" href="participants.html">Participants</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="">Classement</a>
+          <a class="nav-link text-white" href="#">Classement</a>
         </li>
       </ul>
     </nav>
@@ -175,12 +175,10 @@
             </div>
             <div class="modal-body d-flex flex-column align-middle ">
               <form action="" id="formNouveauParticipantModal" class="d-flex flex-column">
-                <label for="username">Username</label>
-                <input type="text" id="username" required>
-                <label for="name">Nom</label>
-                <input type="text" id="name" required>
-                <label for="prénom">Prénom</label>
-                <input type="text" id="prénom" required>
+                <label for="pseudo">Pseudo :</label>
+                <input type="text" id="pseudo" required>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" required>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                   <button type="submit" class="btn btn-success" id="confirmer-participant">Confirmer</button>
@@ -253,9 +251,9 @@
     </main>
   </div>
   </div>
+  <script src="js/data.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/index.js"></script>
   <script src="participants.js"></script>
 </body>
-
 </html>
