@@ -2,59 +2,52 @@ const participantsContainer = document.getElementById("container-participants");
 
 const confirmerParticipant = document.getElementById("confirmer-participant");
 
-const form = document.getElementById("formNouveauParticipantModal")
+const form = document.getElementById("formNouveauParticipantModal");
 
 
+function ajouterParticipant() {
+  let participants = JSON.parse(localStorage.getItem("participants"));
 
+  if (participants == null) {
+    participants = [];
+  }
 
+  form.addEventListener("submit", (event) => {
+    const pseudo = form.pseudo.value;
+    const nom = form.nom.value;
+    id = new Date().getTime();
+    event.preventDefault();
+    participants.push({ id: id, pseudo: pseudo, nom: nom });
+    localStorage.setItem("participants", JSON.stringify(participants));
+    afficherParticipants();
+    console.log(participants);
+  });
+}
 
-function afficherLesParticipants(){
-    participantsContainer.innerHTML = ``
+function afficherParticipants() {
+  participantsContainer.innerHTML = ``;
 
-    participants.forEach(participant => {
-        
-        let carteParticipant = `<div class="col-lg-3" id="id-card-participant">
-                <div class="card">
-                <img src="images/avatar.png" alt="" class="card-image">
-                <div class="card-body">
-                    <h1 class="card-title">${participant.pseudo}</h1>
-                    <p class="card-description">${participant.participantName}</p>
-                    <p class="card-description">Défis palceholder</p>
-                    <button class="btn bg-primary text-white" data-bs-target="#modifierParticipantModal"
-                    data-bs-toggle="modal">Modifier</button>
-                    <a href="" class="btn btn-danger">Supprimer</a>
-                </div>
-                </div>
+  let participants = JSON.parse(localStorage.getItem("participants"))
+
+  participants.forEach(participant => {
+    let carte = `<div class="col-lg-3" id="${participant.id}">
+            <div class="card">
+              <img src="images/avatar.png" alt="" class="card-image">
+              <div class="card-body">
+                <h1 class="card-title">${participant.pseudo}</h1>
+                <p class="card-description">${participant.nom}</p>
+                <p class="card-description">Défis 2/5</p>
+                <button class="btn bg-primary text-white" data-bs-target="#modifierParticipantModal"
+                  data-bs-toggle="modal">Modifier</button>
+                <a href="" class="btn btn-danger">Supprimer</a>
+              </div>
             </div>
-            `
+          </div>`
 
-    participantsContainer.innerHTML += carteParticipant
-});
+    participantsContainer.innerHTML += carte
+  })
+
 }
 
-function ajouterParticipant(){
-    
-form.addEventListener("submit", (event) => {
-    event.preventDefault()
-    const pseudo = form.pseudo.value
-    const nom = form.nom.value
-
-     participants.push({
-        id: id,
-        participantName: nom,
-        pseudo: pseudo,
-        performance: []
-    })
-    localStorage.setItem("participants",JSON.stringify(participants))
-    id++
-    participants = JSON.parse(localStorage.getItem("participants"))
-    afficherLesParticipants()
-    
-})
-}
-
-afficherLesParticipants()
-ajouterParticipant()
-
-
-
+ajouterParticipant();
+afficherParticipants();
