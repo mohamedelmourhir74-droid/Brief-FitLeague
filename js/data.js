@@ -3,19 +3,22 @@ const challenges = [
         id: 1,
         challengeName: "Running",
         description: "Marathon 5KM",
-        participants:[1,4]
+        participants:[1,4],
+        photo: "assists/defi-sportif.webp"
     },
     {
         id: 2,
         challengeName: "Fitness",
         description: "Do 100 push-ups every day",
-        participants:[2,5]
+        participants:[2,5],
+        photo: "assists/defi-sportif.webp"
     },
     {
         id: 3,
         challengeName: "Coding",
         description: "Build 5 projects in 30 days",
-        participants:[3]
+        participants:[3],
+        photo: "assists/defi-sportif.webp"
     }
 ];
 
