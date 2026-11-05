@@ -1,9 +1,19 @@
 .main-content{
-    min-height: 100vh;
+    min-height: 94.5vh;
     width: 100%;
     overflow: scroll;
     max-height:100vh;
 }
+.collaps{
+    width: 0;
+    transform: all 1s ease;
+    ul{
+      opacity: 0;
+      li{
+        opacity: 0;
+      }  
+      } 
+    }
 
 .icon-contaner{
     width: 3rem;
